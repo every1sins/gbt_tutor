@@ -346,7 +346,8 @@ _data = {
 }
 
 [sub_resource type="Animation" id="Animation_iywne"]
-length = 0.001
+length = 2.0
+loop_mode = 2
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -354,10 +355,10 @@ tracks/0/path = NodePath(".:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [Vector2(752, -5)]
+"values": [Vector2(752, -5), Vector2(624, -96), Vector2(752, 0)]
 }
 
 [sub_resource type="Animation" id="Animation_p57ef"]
@@ -467,4 +468,4 @@ position = Vector2(752, -5)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="platforms/platform3" unique_id=260785588]
 libraries/ = SubResource("AnimationLibrary_u5sy4")
-autoplay = &"lift"
+autoplay = &"RESET"
