@@ -11,8 +11,8 @@ var direction = 1
 # Called when the node enters the scene tree for the first time.
 func _process(_delta):
 	if ray_castright.is_colliding():
-		direction = -1 
+		direction = -1.0 
 	if ray_castleft.is_colliding():
-		direction = 1
+		direction = 1.0
 	$AnimatedSprite2D.flip_h = direction < 0
 	position.x += direction *  SPEED * _delta
